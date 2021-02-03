@@ -154,8 +154,10 @@ const App = () => {
             />
             <label hidden={!contactError}>Not a proper Contact Number</label>
           </div>
+          <br />
           <div>
-            <input type="submit" onClick={handleSubmit} />
+            <button onClick={() => ChangeView(!gridView)}>Cancel</button>
+            <button onClick={handleSubmit}>Submit</button>
           </div>
         </div>
       )}
