@@ -121,7 +121,7 @@ const App = () => {
               id="firstName"
               name="firstName"
               onChange={onFNameChange}
-              value={firstName}
+              // value={firstName}
             />
             <label hidden={!firstNameError}>Invalid Data</label>
           </div>
@@ -132,7 +132,7 @@ const App = () => {
               id="lastName"
               name="lastName"
               onChange={onLNameChange}
-              value={lastName}
+              // value={lastName}
             />
             <label hidden={!lastNameError}>Invalid Data</label>
           </div>
