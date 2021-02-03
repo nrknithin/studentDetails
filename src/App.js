@@ -175,12 +175,12 @@ const App = () => {
           <div>
             <button onClick={handleAddCourse}>Add Course</button>
           </div>
-          <Table
+          {/* <Table
             columns={columnsCourse}
             data={course}
             customStyles={customStyles}
             exp={false}
-          />
+          /> */}
         </div>
       ) : (
         <div className="container">
