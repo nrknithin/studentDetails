@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import StudentForm from "./sreen/StudentForm";
+import StudentList from "./sreen/StudentList";
+import CourseForm from "./sreen/CourseForm";
+import CourseList from "./sreen/CourseList";
+import ChooseCourse from "./sreen/ChooseCourse";
 
-function App() {
+
+export default function BasicExample() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/student">
+            <StudentForm />
+          </Route>
+          <Route path="/studentList">
+            <StudentList />
+          </Route>
+          <Route path="/course">
+            <CourseForm />
+          </Route>
+          <Route path="/courseList">
+            <CourseList />
+          </Route>
+          <Route path="/chooseCourse">
+            <ChooseCourse />
+          </Route>
+        </Switch>
+    </Router>
+    </header>
     </div>
   );
 }
 
-export default App;
+
+function Home() {
+  return (
+    <div>
+      <h2>Sage</h2>
+    </div>
+  );
+}
+
